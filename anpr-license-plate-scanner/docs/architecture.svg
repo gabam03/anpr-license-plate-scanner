@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510">
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#1f2937}.t{font-size:20px;font-weight:bold;fill:#1F3864}.b{fill:#EEF2FA;stroke:#1F3864;stroke-width:2}.h{fill:#1F3864}.ht{fill:#fff;font-weight:bold;font-size:15px}.l{font-size:14px}.s{font-size:12px;fill:#4b5563}.w{stroke:#1F3864;stroke-width:2;fill:none}</style>
+<defs><marker id="a" viewBox="0 0 10 10" markerWidth="5" markerHeight="5" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1F3864"/></marker></defs>
+<rect width="800" height="510" fill="#fff"/><text class="t" x="40" y="40">ANPR License Plate Scanner: pipeline</text>
+<rect class="b" x="40" y="70" width="200" height="80" rx="10"/>
+<text class="l" x="140.0" y="106.0" text-anchor="middle">IP bullet camera</text>
+<text class="s" x="140.0" y="124.0" text-anchor="middle">RTSP stream</text>
+<rect class="b" x="300" y="70" width="200" height="80" rx="10"/>
+<text class="l" x="400.0" y="106.0" text-anchor="middle">Raspberry Pi</text>
+<text class="s" x="400.0" y="124.0" text-anchor="middle">every Nth frame</text>
+<rect class="b" x="560" y="70" width="200" height="80" rx="10"/>
+<text class="l" x="660.0" y="106.0" text-anchor="middle">Pre-process</text>
+<text class="s" x="660.0" y="124.0" text-anchor="middle">grey, bilateral filter</text>
+<rect class="b" x="40" y="220" width="200" height="80" rx="10"/>
+<text class="l" x="140.0" y="256.0" text-anchor="middle">Edges + contours</text>
+<text class="s" x="140.0" y="274.0" text-anchor="middle">Canny</text>
+<rect class="b" x="300" y="220" width="200" height="80" rx="10"/>
+<text class="l" x="400.0" y="256.0" text-anchor="middle">Plate candidates</text>
+<text class="s" x="400.0" y="274.0" text-anchor="middle">4 corners, aspect 2-6</text>
+<rect class="b" x="560" y="220" width="200" height="80" rx="10"/>
+<text class="l" x="660.0" y="256.0" text-anchor="middle">Perspective warp</text>
+<text class="s" x="660.0" y="274.0" text-anchor="middle">flatten plate</text>
+<rect class="b" x="40" y="370" width="200" height="80" rx="10"/>
+<text class="l" x="140.0" y="406.0" text-anchor="middle">OCR</text>
+<text class="s" x="140.0" y="424.0" text-anchor="middle">Tesseract A-Z, 0-9</text>
+<rect class="b" x="300" y="370" width="200" height="80" rx="10"/>
+<text class="l" x="400.0" y="406.0" text-anchor="middle">Format check</text>
+<text class="s" x="400.0" y="424.0" text-anchor="middle">ABC-123DE + fixes</text>
+<rect class="b" x="560" y="370" width="200" height="80" rx="10"/>
+<text class="l" x="660.0" y="406.0" text-anchor="middle">CSV log</text>
+<text class="s" x="660.0" y="424.0" text-anchor="middle">+ snapshot</text>
+<line class="w" x1="240" y1="110.0" x2="296" y2="110.0" marker-end="url(#a)"/>
+<line class="w" x1="500" y1="110.0" x2="556" y2="110.0" marker-end="url(#a)"/>
+<path class="w" d="M660.0,150 L660.0,185.0 L140.0,185.0 L140.0,216" marker-end="url(#a)"/>
+<line class="w" x1="240" y1="260.0" x2="296" y2="260.0" marker-end="url(#a)"/>
+<line class="w" x1="500" y1="260.0" x2="556" y2="260.0" marker-end="url(#a)"/>
+<path class="w" d="M660.0,300 L660.0,335.0 L140.0,335.0 L140.0,366" marker-end="url(#a)"/>
+<line class="w" x1="240" y1="410.0" x2="296" y2="410.0" marker-end="url(#a)"/>
+<line class="w" x1="500" y1="410.0" x2="556" y2="410.0" marker-end="url(#a)"/>
+<text class="s" x="40" y="490">Unit mounts on an existing streetlight: power from the lamp supply, camera angled at the lane.</text>
+</svg>
